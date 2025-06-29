@@ -1,0 +1,46 @@
+# Claude AI Context File
+
+## IMPORTANT: Read These Files First
+1. `CLAUDE.md` - Core best practices and procedures
+2. `CLAUDE_ENHANCED.md` - Extended documentation with troubleshooting
+3. `docs/CLAUDE_ENHANCED_PART2.md` - Additional guidelines
+
+## Current Environment
+- **OS**: Windows 11 with WSL2 Ubuntu
+- **Server**: Vite development server
+- **Issue**: Server mounting problems after upgrades
+- **Project**: Microgreens Management System v1.4.0
+
+## Known Issues
+- WSL2 file system mounting issues after Windows updates
+- Port binding conflicts between Windows and WSL
+- File permission problems across WSL/Windows boundary
+
+## Quick Commands
+```bash
+# Check WSL version
+wsl --version
+
+# List WSL distributions
+wsl --list --verbose
+
+# Restart WSL
+wsl --shutdown
+wsl
+
+# Check mounted drives
+mount | grep drvfs
+
+# Fix permissions
+sudo chmod -R 755 /mnt/c/Users/axele/Desktop/Microgreens_Project
+```
+
+## Server Start Procedure for WSL
+1. Always use `--host 0.0.0.0` flag
+2. Check Windows Firewall isn't blocking port 5173
+3. Use `127.0.0.1:5173` in browser, not `localhost`
+
+## Reference the enhanced documentation for:
+- Complete troubleshooting procedures
+- Server update protocols
+- Recovery procedures
